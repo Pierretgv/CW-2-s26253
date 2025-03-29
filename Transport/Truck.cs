@@ -16,12 +16,12 @@ namespace ContainerManagement.Transport
         public void CheckFuelEfficiency(double distance)
         {
             if (distance > MaxRange)
-                Console.WriteLine($"🚛 Uwaga! Dystans {distance} km przekracza zasięg ciężarówki ({MaxRange} km). Konieczny postój na tankowanie.");
+                Console.WriteLine($"Uwaga! Dystans {distance} km przekracza zasięg ciężarówki ({MaxRange} km). Konieczny postój na tankowanie.");
             else
-                Console.WriteLine($"🚛 Trasa {distance} km jest w zasięgu ciężarówki. Można ruszać!");
+                Console.WriteLine($"Trasa {distance} km jest w zasięgu ciężarówki. Można ruszać!");
         }
 
         public override string ToString() =>
-            $"🚛 Ciężarówka przewozi {Containers.Count}/{MaxContainers} kontenerów. Całkowita masa: {GetTotalWeight()} kg, Maksymalny zasięg: {MaxRange} km.";
+            $"Ciężarówka przewozi {Containers.Count}/{MaxContainers} kontenerów. Całkowita masa: {GetTotalWeight()} kg, Maksymalny zasięg: {MaxRange} km.";
     }
 }
